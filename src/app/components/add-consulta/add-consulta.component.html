@@ -1,0 +1,42 @@
+<div>
+
+    <br>
+ <h1> Contacta al anunciante </h1>
+ <p>Completa esta información y consigue respuestas más rápido. Nosotros le enviaremos tus datos de contacto al anunciante.</p>
+
+
+    <form class="content" (submit)="guardarConsulta">
+        <div class="submit-form">
+              <label for="descripcion">Nombre completo*</label>
+              <input  type="text" class="form-control" id="nombre" placeholder="Ingrese nombres completos"   [(ngModel)]="consulta.nombre">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Coloque su correo*</label>
+          <input  type="email" class="form-control" id="correo" placeholder="name@example.com" [(ngModel)]="consulta.correo" >
+       </div>
+       <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Escribe algún momentario*  </label>
+          <textarea type="text" class="form-control" id="comentario" rows="3" [(ngModel)]="consulta.comentario"></textarea>
+        </div>
+        
+        <div class="input-group mb-3">
+           <span class="input-group-text" >+51</span>
+           <input  type="number" class="form-control" placeholder="telefono" aria-label="Username" [(ngModel)]="consulta.telefono" >
+        </div>
+        
+        <div class="mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+            <label class="form-check-label" for="invalidCheck2">
+              Soy titular de la información suministrada, he leído y acepto la política de tratamiento de datos
+            </label>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-danger btn-lg">Contactar</button>
+         
+        </form>
+        
+
+
+</div>
