@@ -1,0 +1,81 @@
+<div>
+
+  <form class="content" (submit)="registraProducto()">
+    <div class="submit-form">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Registro de Producto </h2>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-lg-1 control-label" for="id_reg_nombre" style="text-align: left;">Nombre</label>
+        <div class="col-lg-5">
+          <input class="form-control" id="nombre" name="nombre" placeholder="Ingrese el Nombre" type="text"
+            maxlength="20" [(ngModel)]="producto.nombre" />
+        </div>
+        <label class="col-lg-1 control-label" for="id_reg_nombre" style="text-align: left;">Categoria</label>
+        <div class="col-lg-5">
+          <select id="categoria" name="categoria" class="form-control" maxlength="20"
+            [(ngModel)]="producto.categoria!.idcategoria">
+
+            <option value="-1"> [Seleccione] </option>
+            <option *ngFor="let aux of lstCategoria" value="{{aux.idcategoria}}">
+              {{aux.descripcion}}
+
+            </option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label class="col-lg-1 control-label" for="id_reg_precio" style="text-align: left;">Precio</label>
+        <div class="col-lg-5">
+          <input class="form-control" id="precio" name="precio" placeholder="Ingrese el precio" type="number"
+            [(ngModel)]="producto.precio" />
+        </div>
+        <label class="col-lg-2 control-label" for="id_reg_autor" style="text-align: left;">Autor</label>
+        <div class="col-lg-4">
+          <input class="form-control" id="autor" name="autor" placeholder="Ingrese el autor" type="text"
+            [(ngModel)]="producto.autor" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-lg-1 control-label" for="id_reg_foto" style="text-align: left;">Foto</label>
+        <div class="col-lg-5">
+          <input class="form-control" id="foto" name="foto" placeholder="Ingrese la foto" type="file"
+            [(ngModel)]="producto.foto1" />
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label class="col-lg-1 control-label" for="id_reg_foto" style="text-align: left;">Descripcion</label>
+        <div class="col-lg-5">
+          <input class="form-control" id="descripcion" name="descripcion"
+            placeholder="Ingrese la descripcion de producto" type="text" [(ngModel)]="producto.descripcion" />
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-9 col-lg-offset-3">
+          <button type="button" class="btn  btn-success" id="id_btn_registra">REGISTRA</button>
+        </div>
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+  </form>
+
+
+</div>
